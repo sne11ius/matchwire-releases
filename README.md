@@ -27,7 +27,7 @@ bluff, comeback, misplay, and ridiculous win more memorable.
 
 ---
 
-## 🚧 CURRENT BUILD // v0.1.0
+## 🚧 CURRENT BUILD // v0.1.1
 
 > [!IMPORTANT]
 > MatchWire is currently a **pre-alpha foundation build**. The Windows app,
@@ -40,6 +40,7 @@ bluff, comeback, misplay, and ridiculous win more memorable.
 - [x] MatchWire interface and status screen
 - [x] Public downloads and automatic update channel
 - [x] Repeatable Windows release pipeline
+- [x] First end-to-end update-path release
 
 ### Next up 🧭
 
@@ -65,6 +66,7 @@ then **Run anyway**.
 
 | Release | Codename | Status |
 | --- | --- | --- |
+| [`v0.1.1`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.1) | Update Ping | Current |
 | [`v0.1.0`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.0) | Boot Sequence | Foundation online |
 
 ## 🧪 Project status
