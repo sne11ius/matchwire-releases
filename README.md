@@ -1,73 +1,79 @@
-# MATCHWIRE
+# MatchWire 🎴🎙️
 
-**PRE-ALPHA // TABLE LINK PROTOCOL**
+### Arena pairs the match. MatchWire opens the table.
 
-MTG Arena decides the matchup. MatchWire is being built to turn that same
-matchup into a temporary player-to-player table for text, voice, and video.
+Magic has always been more than cards and rules. It is the greeting before the
+first draw, the reaction to an impossible topdeck, the conversation between
+plays, and the final *good game* when the dust settles.
 
-No lobby. No room code. No permanent room. The link should exist for the match
-and disappear when the match ends.
+MatchWire brings that table feeling to MTG Arena.
 
-[**Download the current Windows build**](https://github.com/sne11ius/matchwire-releases/releases/latest)
+## ✨ The vision
 
-## SYSTEM STATUS
+You queue for an ordinary Arena match. Your opponent does the same. If you both
+use MatchWire, the match becomes your table:
 
-```text
-WINDOWS CLIENT       ONLINE
-LOCAL INSTALLER      ONLINE
-SELF-UPDATE CHANNEL  ONLINE
-ARENA MATCH DETECTION AWAITING DUAL-LOG CONFIRMATION
-PEER RENDEZVOUS      NOT DEPLOYED
-TEXT / VOICE / VIDEO NOT DEPLOYED
-```
+- 💬 Chat without exchanging usernames or room codes
+- 🎙️ Talk like you would across a real table
+- 📹 Turn on video when both players want the full face-to-face game
+- 🔒 Connect directly, with no permanent public room
+- 👋 Leave the table naturally when the match ends
 
-The downloadable application is a working desktop and update foundation. It
-does not yet detect matches or connect players. The next checkpoint is proving
-that both sides of one real Arena match observe the same match ID and reciprocal
-player IDs.
+No Discord detour. No friend request. No invitation link pasted into chat. The
+match already knows who belongs at the table, so the match itself is the room.
 
-## CURRENT BUILD // v0.1.0 "BOOT SEQUENCE"
+MatchWire is for the games where seeing the player across from you makes every
+bluff, comeback, misplay, and ridiculous win more memorable.
 
-- Installable 64-bit Windows desktop client
-- Public GitHub release channel
-- User-controlled update checks, downloads, and restart
-- Secure Electron renderer boundary
-- MatchWire visual shell and status display
+---
 
-[Read the v0.1.0 field report](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.0)
+## 🚧 CURRENT BUILD // v0.1.0
 
-## NEXT OBJECTIVE // RECIPROCAL SIGNAL
+> [!IMPORTANT]
+> MatchWire is currently a **pre-alpha foundation build**. The Windows app,
+> installer, releases, and updates work. It does **not yet** detect Arena
+> matches or connect two players.
 
-Two isolated Arena clients will play one Direct Challenge while preserving both
-`Player.log` perspectives. That test must confirm:
+### Shipped ✅
 
-- Both clients observe the same match identifier.
-- Each client identifies itself and its opponent in reciprocal positions.
-- A reliable event marks the end of the match.
+- [x] Installable Windows desktop app
+- [x] MatchWire interface and status screen
+- [x] Public downloads and automatic update channel
+- [x] Repeatable Windows release pipeline
 
-Only after that signal is confirmed will MatchWire add rendezvous and WebRTC.
-The prototype is deliberately advancing one verified assumption at a time.
+### Next up 🧭
 
-## INSTALL ADVISORY
+- [ ] Confirm that both players see the same Arena match identity
+- [ ] Detect match start and match end automatically
+- [ ] Introduce matched players through a temporary connection
+- [ ] Bring text chat online
+- [ ] Add opt-in voice and video
 
-The current Windows installer is unsigned. Windows SmartScreen may display a
-warning; select **More info** and then **Run anyway** only if you downloaded the
-installer from this repository. Code signing is deferred while MatchWire is a
-small experimental project.
+The immediate quest is small but decisive: capture both sides of one real Arena
+match and prove that the clients independently recognize each other. Once that
+works, the table can come online.
 
-## TRANSMISSION LOG
+## 🚀 Try the foundation build
 
-| Version | State | Field report |
+[**Download MatchWire for Windows**](https://github.com/sne11ius/matchwire-releases/releases/latest)
+
+The installer is currently unsigned, so Windows SmartScreen may show a warning.
+If you downloaded it from this official repository, select **More info** and
+then **Run anyway**.
+
+## 📜 Ship log
+
+| Release | Codename | Status |
 | --- | --- | --- |
-| `v0.1.0` | Current | [Boot Sequence](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.0) |
+| [`v0.1.0`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.0) | Boot Sequence | Foundation online |
 
-## OPERATING CONDITIONS
+## 🧪 Project status
 
-- Windows x64 only
-- Experimental pre-alpha software
-- No MatchWire account system or persistent match history
-- Camera and microphone are not activated by this build
-- Installer and update metadata are published here; application development is
-  managed in a separate private source repository
+- **Platform:** Windows x64
+- **Stage:** Experimental pre-alpha
+- **Media access:** Camera and microphone remain off in the current build
+- **Data:** No MatchWire accounts, recordings, or persistent match history
+- **Development:** Active spare-time project, one verified assumption at a time
 
-This repository is the official public release channel for MatchWire.
+Watch this repository for the next drop. The first real milestone is not a
+feature count. It is two Arena opponents discovering the same table. ⚡
