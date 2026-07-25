@@ -17,7 +17,7 @@ use MatchWire, the match becomes your table:
 - 🎙️ Talk like you would across a real table
 - 📹 Turn on video when both players want the full face-to-face game
 - 🔒 Connect directly, with no permanent public room
-- 👋 Leave the table naturally when the match ends
+- 👋 Stay for the post-match conversation, then leave the table naturally
 
 No Discord detour. No friend request. No invitation link pasted into chat. The
 match already knows who belongs at the table, so the match itself is the room.
@@ -27,12 +27,13 @@ bluff, comeback, misplay, and ridiculous win more memorable.
 
 ---
 
-## 🚧 CURRENT BUILD // v0.1.2
+## 🚧 CURRENT BUILD // v0.1.3
 
 > [!IMPORTANT]
-> MatchWire is currently a **pre-alpha foundation build**. The Windows app,
-> installer, releases, and updates work. It does **not yet** detect Arena
-> matches or connect two players.
+> MatchWire is currently a **pre-alpha live-path test build**. It watches
+> Arena's detailed log and can attempt a match-scoped peer connection when both
+> players run MatchWire. It does **not yet** provide player chat, voice, or
+> video.
 
 ### Shipped ✅
 
@@ -42,20 +43,29 @@ bluff, comeback, misplay, and ridiculous win more memorable.
 - [x] Repeatable Windows release pipeline
 - [x] First end-to-end update-path release
 - [x] Consecutive updater release validation
+- [x] Automatic Arena match lifecycle detection
+- [x] Reciprocal match rendezvous and WebRTC verification probe
+- [x] Hosted ephemeral signaling endpoint
 
 ### Next up 🧭
 
-- [ ] Confirm that both players see the same Arena match identity
-- [ ] Detect match start and match end automatically
-- [ ] Introduce matched players through a temporary connection
+- [x] Confirm that both players see the same Arena match identity
+- [x] Detect match start, completion, and leaving automatically
+- [x] Prove reciprocal pairing and a direct data channel with saved match logs
+- [x] Bring the temporary rendezvous endpoint online
+- [ ] Introduce two live desktop clients through a temporary connection
 - [ ] Bring text chat online
 - [ ] Add opt-in voice and video
 
-The immediate quest is small but decisive: capture both sides of one real Arena
-match and prove that the clients independently recognize each other. Once that
-works, the table can come online.
+Both sides of one real Arena match confirm the same match and reciprocal player
+identities. MatchWire now follows that live lifecycle, reports reciprocal
+identities through the temporary hosted rendezvous, and attempts a direct WebRTC
+data-channel probe. Saved match perspectives verify that the channel survives
+the match result and closes when either player leaves the Arena scene. The next
+quest is proving that full path between two live desktop clients in a Direct
+Challenge.
 
-## 🚀 Try the foundation build
+## 🚀 Try the live-path build
 
 [**Download MatchWire for Windows**](https://github.com/sne11ius/matchwire-releases/releases/latest)
 
@@ -67,7 +77,8 @@ then **Run anyway**.
 
 | Release | Codename | Status |
 | --- | --- | --- |
-| [`v0.1.2`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.2) | Update Echo | Current |
+| [`v0.1.3`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.3) | Direct Probe | Current |
+| [`v0.1.2`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.2) | Update Echo | Updater validation |
 | [`v0.1.1`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.1) | Update Ping | Updater validation |
 | [`v0.1.0`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.0) | Boot Sequence | Foundation online |
 
