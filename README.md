@@ -30,13 +30,13 @@ Arena for a separate chat application.
 
 ---
 
-## 🚧 CURRENT BUILD // v0.1.4
+## 🚧 CURRENT BUILD // v0.1.5
 
 > [!IMPORTANT]
 > MatchWire is currently a **pre-alpha overlay test build**. When both players
 > run this version, it can open temporary peer-to-peer text chat over Arena. The
-> overlay still needs live two-client validation, and voice and video are not
-> implemented.
+> overlay still needs live two-client validation. Updates are now unattended;
+> voice and video are not implemented.
 
 ### Shipped ✅
 
@@ -46,6 +46,7 @@ Arena for a separate chat application.
 - [x] Repeatable Windows release pipeline
 - [x] First end-to-end update-path release
 - [x] Consecutive updater release validation
+- [x] Unattended, match-safe desktop updates
 - [x] Automatic Arena match lifecycle detection
 - [x] Reciprocal match rendezvous and WebRTC verification probe
 - [x] Hosted ephemeral signaling endpoint
@@ -72,6 +73,10 @@ including result-screen persistence and scene-exit teardown. The next quest is
 validating the new `v0.1.4` Arena overlay and ephemeral text chat between those
 live clients, then using that same surface for opt-in voice and video.
 
+Starting with `v0.1.5`, MatchWire downloads updates in the background and
+silently restarts to install them. If an Arena match is active, it waits until
+the local player leaves the match scene so the table is not interrupted.
+
 ## 🚀 Try the overlay build
 
 [**Download MatchWire for Windows**](https://github.com/sne11ius/matchwire-releases/releases/latest)
@@ -84,7 +89,8 @@ then **Run anyway**.
 
 | Release | Codename | Status |
 | --- | --- | --- |
-| [`v0.1.4`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.4) | Table View | Current |
+| [`v0.1.5`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.5) | Silent Switch | Current |
+| [`v0.1.4`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.4) | Table View | Overlay introduction |
 | [`v0.1.3`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.3) | Direct Probe | Direct-path validation |
 | [`v0.1.2`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.2) | Update Echo | Updater validation |
 | [`v0.1.1`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.1) | Update Ping | Updater validation |
