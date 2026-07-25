@@ -25,15 +25,18 @@ match already knows who belongs at the table, so the match itself is the room.
 MatchWire is for the games where seeing the player across from you makes every
 bluff, comeback, misplay, and ridiculous win more memorable.
 
+The table belongs over the game itself, so conversation does not require leaving
+Arena for a separate chat application.
+
 ---
 
-## 🚧 CURRENT BUILD // v0.1.3
+## 🚧 CURRENT BUILD // v0.1.4
 
 > [!IMPORTANT]
-> MatchWire is currently a **pre-alpha live-path test build**. It watches
-> Arena's detailed log and can attempt a match-scoped peer connection when both
-> players run MatchWire. It does **not yet** provide player chat, voice, or
-> video.
+> MatchWire is currently a **pre-alpha overlay test build**. When both players
+> run this version, it can open temporary peer-to-peer text chat over Arena. The
+> overlay still needs live two-client validation, and voice and video are not
+> implemented.
 
 ### Shipped ✅
 
@@ -46,6 +49,7 @@ bluff, comeback, misplay, and ridiculous win more memorable.
 - [x] Automatic Arena match lifecycle detection
 - [x] Reciprocal match rendezvous and WebRTC verification probe
 - [x] Hosted ephemeral signaling endpoint
+- [x] Arena-attached overlay and ephemeral peer-to-peer text
 
 ### Next up 🧭
 
@@ -53,19 +57,22 @@ bluff, comeback, misplay, and ridiculous win more memorable.
 - [x] Detect match start, completion, and leaving automatically
 - [x] Prove reciprocal pairing and a direct data channel with saved match logs
 - [x] Bring the temporary rendezvous endpoint online
-- [ ] Introduce two live desktop clients through a temporary connection
-- [ ] Bring text chat online
+- [x] Introduce two live desktop clients through a temporary connection
+- [x] Bring text chat online for testing
+- [ ] Validate overlay chat between two live desktop clients
 - [ ] Add opt-in voice and video
 
 Both sides of one real Arena match confirm the same match and reciprocal player
 identities. MatchWire now follows that live lifecycle, reports reciprocal
 identities through the temporary hosted rendezvous, and attempts a direct WebRTC
 data-channel probe. Saved match perspectives verify that the channel survives
-the match result and closes when either player leaves the Arena scene. The next
-quest is proving that full path between two live desktop clients in a Direct
-Challenge.
+the match result and closes when either player leaves the Arena scene. Two live
+`v0.1.3` clients have now completed that full path during a Direct Challenge,
+including result-screen persistence and scene-exit teardown. The next quest is
+validating the new `v0.1.4` Arena overlay and ephemeral text chat between those
+live clients, then using that same surface for opt-in voice and video.
 
-## 🚀 Try the live-path build
+## 🚀 Try the overlay build
 
 [**Download MatchWire for Windows**](https://github.com/sne11ius/matchwire-releases/releases/latest)
 
@@ -77,7 +84,8 @@ then **Run anyway**.
 
 | Release | Codename | Status |
 | --- | --- | --- |
-| [`v0.1.3`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.3) | Direct Probe | Current |
+| [`v0.1.4`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.4) | Table View | Current |
+| [`v0.1.3`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.3) | Direct Probe | Direct-path validation |
 | [`v0.1.2`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.2) | Update Echo | Updater validation |
 | [`v0.1.1`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.1) | Update Ping | Updater validation |
 | [`v0.1.0`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.0) | Boot Sequence | Foundation online |
