@@ -30,13 +30,13 @@ Arena for a separate chat application.
 
 ---
 
-## 🚧 CURRENT BUILD // v0.1.5
+## 🚧 CURRENT BUILD // v0.1.6
 
 > [!IMPORTANT]
 > MatchWire is currently a **pre-alpha overlay test build**. When both players
 > run this version, it can open temporary peer-to-peer text chat over Arena. The
-> overlay still needs live two-client validation. Updates are now unattended;
-> voice and video are not implemented.
+> overlay has passed a live two-client in-game chat test. Result-screen overlay
+> behavior still needs validation; voice and video are not implemented.
 
 ### Shipped ✅
 
@@ -51,6 +51,7 @@ Arena for a separate chat application.
 - [x] Reciprocal match rendezvous and WebRTC verification probe
 - [x] Hosted ephemeral signaling endpoint
 - [x] Arena-attached overlay and ephemeral peer-to-peer text
+- [x] Automatic chat opening without dashboard focus or taskbar interference
 
 ### Next up 🧭
 
@@ -60,7 +61,8 @@ Arena for a separate chat application.
 - [x] Bring the temporary rendezvous endpoint online
 - [x] Introduce two live desktop clients through a temporary connection
 - [x] Bring text chat online for testing
-- [ ] Validate overlay chat between two live desktop clients
+- [x] Validate in-game overlay chat between two live desktop clients
+- [ ] Validate overlay chat on the result screen and at scene exit
 - [ ] Add opt-in voice and video
 
 Both sides of one real Arena match confirm the same match and reciprocal player
@@ -68,10 +70,11 @@ identities. MatchWire now follows that live lifecycle, reports reciprocal
 identities through the temporary hosted rendezvous, and attempts a direct WebRTC
 data-channel probe. Saved match perspectives verify that the channel survives
 the match result and closes when either player leaves the Arena scene. Two live
-`v0.1.3` clients have now completed that full path during a Direct Challenge,
-including result-screen persistence and scene-exit teardown. The next quest is
-validating the new `v0.1.4` Arena overlay and ephemeral text chat between those
-live clients, then using that same surface for opt-in voice and video.
+`v0.1.3` clients completed that full path during a Direct Challenge, including
+result-screen persistence and scene-exit teardown. The overlay has now carried
+text chat during a live two-client Arena game. The next quest is validating that
+same overlay conversation on the result screen and at scene exit, then using the
+surface for opt-in voice and video.
 
 Starting with `v0.1.5`, MatchWire downloads updates in the background and
 silently restarts to install them. If an Arena match is active, it waits until
@@ -89,7 +92,8 @@ then **Run anyway**.
 
 | Release | Codename | Status |
 | --- | --- | --- |
-| [`v0.1.5`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.5) | Silent Switch | Current |
+| [`v0.1.6`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.6) | Open Table | Current |
+| [`v0.1.5`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.5) | Silent Switch | Unattended updates |
 | [`v0.1.4`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.4) | Table View | Overlay introduction |
 | [`v0.1.3`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.3) | Direct Probe | Direct-path validation |
 | [`v0.1.2`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.2) | Update Echo | Updater validation |
