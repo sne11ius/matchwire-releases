@@ -30,13 +30,14 @@ Arena for a separate chat application.
 
 ---
 
-## 🚧 CURRENT BUILD // v0.1.6
+## 🚧 CURRENT BUILD // v0.1.7
 
 > [!IMPORTANT]
-> MatchWire is currently a **pre-alpha overlay test build**. When both players
-> run this version, it can open temporary peer-to-peer text chat over Arena. The
-> overlay has passed a live two-client in-game chat test. Result-screen overlay
-> behavior still needs validation; voice and video are not implemented.
+> MatchWire is currently a **pre-alpha voice test build**. When both players run
+> this version, it can open temporary peer-to-peer text chat and explicit
+> opt-in voice over Arena. Text has passed a live in-game test. Voice and
+> result-screen overlay behavior still need live validation; video is not
+> implemented.
 
 ### Shipped ✅
 
@@ -52,6 +53,7 @@ Arena for a separate chat application.
 - [x] Hosted ephemeral signaling endpoint
 - [x] Arena-attached overlay and ephemeral peer-to-peer text
 - [x] Automatic chat opening without dashboard focus or taskbar interference
+- [x] Explicit microphone setup, input selection, mute, and peer-to-peer voice
 
 ### Next up 🧭
 
@@ -63,7 +65,9 @@ Arena for a separate chat application.
 - [x] Bring text chat online for testing
 - [x] Validate in-game overlay chat between two live desktop clients
 - [ ] Validate overlay chat on the result screen and at scene exit
-- [ ] Add opt-in voice and video
+- [x] Add opt-in voice controls and microphone selection
+- [ ] Validate voice between two live Arena clients
+- [ ] Add opt-in video
 
 Both sides of one real Arena match confirm the same match and reciprocal player
 identities. MatchWire now follows that live lifecycle, reports reciprocal
@@ -72,9 +76,10 @@ data-channel probe. Saved match perspectives verify that the channel survives
 the match result and closes when either player leaves the Arena scene. Two live
 `v0.1.3` clients completed that full path during a Direct Challenge, including
 result-screen persistence and scene-exit teardown. The overlay has now carried
-text chat during a live two-client Arena game. The next quest is validating that
-same overlay conversation on the result screen and at scene exit, then using the
-surface for opt-in voice and video.
+text chat during a live two-client Arena game. The overlay now also provides a
+non-transmitting microphone setup step, local input selection, mute, and voice
+that starts only after both players opt in. The next quest is validating voice
+and the complete overlay lifecycle between two live clients.
 
 Starting with `v0.1.5`, MatchWire downloads updates in the background and
 silently restarts to install them. If an Arena match is active, it waits until
@@ -92,7 +97,8 @@ then **Run anyway**.
 
 | Release | Codename | Status |
 | --- | --- | --- |
-| [`v0.1.6`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.6) | Open Table | Current |
+| [`v0.1.7`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.7) | Table Talk | Current |
+| [`v0.1.6`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.6) | Open Table | Overlay behavior |
 | [`v0.1.5`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.5) | Silent Switch | Unattended updates |
 | [`v0.1.4`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.4) | Table View | Overlay introduction |
 | [`v0.1.3`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.3) | Direct Probe | Direct-path validation |
@@ -104,7 +110,8 @@ then **Run anyway**.
 
 - **Platform:** Windows x64
 - **Stage:** Experimental pre-alpha
-- **Media access:** Camera and microphone remain off in the current build
+- **Media access:** Camera stays off; microphone setup and transmission require
+  explicit actions, and transmission starts only after both players join voice
 - **Data:** No MatchWire accounts, recordings, or persistent match history
 - **Development:** Active spare-time project, one verified assumption at a time
 
