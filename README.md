@@ -30,7 +30,7 @@ Arena for a separate chat application.
 
 ---
 
-## 🚧 CURRENT BUILD // v0.1.8
+## 🚧 CURRENT BUILD // v0.1.9
 
 > [!IMPORTANT]
 > MatchWire is currently a **pre-alpha voice test build**. When both players run
@@ -53,6 +53,8 @@ Arena for a separate chat application.
 - [x] Hosted ephemeral signaling endpoint
 - [x] Arena-attached overlay and ephemeral peer-to-peer text
 - [x] Automatic chat opening without dashboard focus or taskbar interference
+- [x] Reliable dashboard, shortcut, and overlay recovery around Arena focus
+- [x] Automatic same-match connection and in-memory chat recovery
 - [x] Explicit microphone setup, input selection, mute, and peer-to-peer voice
 
 ### Next up 🧭
@@ -78,14 +80,19 @@ the match result and closes when either player leaves the Arena scene. Two live
 result-screen persistence and scene-exit teardown. The overlay has now carried
 text chat during a live two-client Arena game. The overlay now also provides a
 non-transmitting microphone setup step, local input selection, mute, and voice
-that starts only after both players opt in. The next quest is validating voice
-and the complete overlay lifecycle between two live clients.
+that starts only after both players opt in. If a direct connection is
+interrupted, `v0.1.9` keeps the table visible, rebuilds WebRTC while the Arena
+match remains active, and synchronizes the last 100 in-memory messages directly
+between recovery-capable peers. The next quest is validating voice and the
+complete overlay lifecycle between two live clients.
 
 Starting with `v0.1.5`, MatchWire downloads updates in the background and
 silently restarts to install them. If an Arena match is active, it waits until
 the local player leaves the match scene so the table is not interrupted.
 `v0.1.8` also checks the release channel hourly, keeping clients current even
-when MatchWire remains open across a later release.
+when MatchWire remains open across a later release. `v0.1.9` makes an explicit
+second launch surface the existing dashboard and lets the global table shortcut
+restore Arena after another window takes focus.
 
 ## 🚀 Try the overlay build
 
@@ -99,7 +106,8 @@ then **Run anyway**.
 
 | Release | Codename | Status |
 | --- | --- | --- |
-| [`v0.1.8`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.8) | Update Pulse | Current |
+| [`v0.1.9`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.9) | Steady Table | Current |
+| [`v0.1.8`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.8) | Update Pulse | Updater reliability |
 | [`v0.1.7`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.7) | Table Talk | Voice controls |
 | [`v0.1.6`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.6) | Open Table | Overlay behavior |
 | [`v0.1.5`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.5) | Silent Switch | Unattended updates |
