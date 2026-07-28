@@ -30,7 +30,7 @@ Arena for a separate chat application.
 
 ---
 
-## 🚧 CURRENT BUILD // v0.1.10
+## 🚧 CURRENT BUILD // v0.1.11
 
 > [!IMPORTANT]
 > MatchWire is currently a **pre-alpha voice test build**. When both players run
@@ -94,7 +94,9 @@ when MatchWire remains open across a later release. `v0.1.9` makes an explicit
 second launch surface the existing dashboard and lets the global table shortcut
 restore Arena after another window takes focus. `v0.1.10` keeps the table's
 native topmost state intact when it becomes interactive, including over
-borderless-fullscreen Arena.
+borderless-fullscreen Arena. During this unstable pre-alpha phase, `v0.1.11`
+checks for bugfix releases once a minute so continuously running test clients do
+not remain outdated for up to an hour.
 
 ## 🚀 Try the overlay build
 
@@ -108,7 +110,8 @@ then **Run anyway**.
 
 | Release | Codename | Status |
 | --- | --- | --- |
-| [`v0.1.10`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.10) | Top Table | Current |
+| [`v0.1.11`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.11) | Rapid Pulse | Current |
+| [`v0.1.10`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.10) | Top Table | Overlay topmost fix |
 | [`v0.1.9`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.9) | Steady Table | Connection recovery |
 | [`v0.1.8`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.8) | Update Pulse | Updater reliability |
 | [`v0.1.7`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.7) | Table Talk | Voice controls |
