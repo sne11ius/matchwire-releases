@@ -30,7 +30,7 @@ Arena for a separate chat application.
 
 ---
 
-## 🚧 CURRENT BUILD // v0.1.7
+## 🚧 CURRENT BUILD // v0.1.8
 
 > [!IMPORTANT]
 > MatchWire is currently a **pre-alpha voice test build**. When both players run
@@ -84,6 +84,8 @@ and the complete overlay lifecycle between two live clients.
 Starting with `v0.1.5`, MatchWire downloads updates in the background and
 silently restarts to install them. If an Arena match is active, it waits until
 the local player leaves the match scene so the table is not interrupted.
+`v0.1.8` also checks the release channel hourly, keeping clients current even
+when MatchWire remains open across a later release.
 
 ## 🚀 Try the overlay build
 
@@ -97,7 +99,8 @@ then **Run anyway**.
 
 | Release | Codename | Status |
 | --- | --- | --- |
-| [`v0.1.7`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.7) | Table Talk | Current |
+| [`v0.1.8`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.8) | Update Pulse | Current |
+| [`v0.1.7`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.7) | Table Talk | Voice controls |
 | [`v0.1.6`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.6) | Open Table | Overlay behavior |
 | [`v0.1.5`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.5) | Silent Switch | Unattended updates |
 | [`v0.1.4`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.4) | Table View | Overlay introduction |
