@@ -30,7 +30,7 @@ Arena for a separate chat application.
 
 ---
 
-## 🚧 CURRENT BUILD // v0.1.9
+## 🚧 CURRENT BUILD // v0.1.10
 
 > [!IMPORTANT]
 > MatchWire is currently a **pre-alpha voice test build**. When both players run
@@ -92,7 +92,9 @@ the local player leaves the match scene so the table is not interrupted.
 `v0.1.8` also checks the release channel hourly, keeping clients current even
 when MatchWire remains open across a later release. `v0.1.9` makes an explicit
 second launch surface the existing dashboard and lets the global table shortcut
-restore Arena after another window takes focus.
+restore Arena after another window takes focus. `v0.1.10` keeps the table's
+native topmost state intact when it becomes interactive, including over
+borderless-fullscreen Arena.
 
 ## 🚀 Try the overlay build
 
@@ -106,7 +108,8 @@ then **Run anyway**.
 
 | Release | Codename | Status |
 | --- | --- | --- |
-| [`v0.1.9`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.9) | Steady Table | Current |
+| [`v0.1.10`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.10) | Top Table | Current |
+| [`v0.1.9`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.9) | Steady Table | Connection recovery |
 | [`v0.1.8`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.8) | Update Pulse | Updater reliability |
 | [`v0.1.7`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.7) | Table Talk | Voice controls |
 | [`v0.1.6`](https://github.com/sne11ius/matchwire-releases/releases/tag/v0.1.6) | Open Table | Overlay behavior |
